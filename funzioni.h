@@ -1,0 +1,17 @@
+struct task_list *leggi_file(char *file, struct task_list *headTask,struct istr_list *headList, struct istruzione *istruzione, struct task *task );
+void pushEndIstr(istr_list *headIstr, istruzione val);
+void pushEndTask(task_list *headTask, task val);
+void pushStartIstr(istr_list **headIstr, istruzione val);
+void pushStartTask(task_list **headTask, task val);
+void remove_lastTask(task_list *headTask);
+void remove_lastIstr(istr_list *headList);
+struct task_list *hrnn(struct task_list *headTask, unsigned int clock);
+void remove_firtTask(task_list ** headTask);
+void remove_by_list(task_list ** headTask, task task);
+unsigned int esegui_not_preemptive(struct task *task, unsigned int clock);
+void scheduler_not_preemptive(struct task_list *headTask);
+void remove_firtIstr(istr_list ** headList);
+void esegui_preemptive(struct task *task, unsigned int clock);
+void scheduler_preemptive(struct task_list *headTask);
+struct task_list *srt(struct task_list *headTask, unsigned int clock);
+void stampa(char *outputFile, unsigned int clock, int id, int status);
